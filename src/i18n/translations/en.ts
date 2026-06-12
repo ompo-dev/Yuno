@@ -1,0 +1,285 @@
+import { VisibilityPreset } from "../../types";
+export const enCopy = {
+    tabs: {
+      home: "Home",
+      events: "Events",
+      notes: "Notes",
+      profile: "Profile",
+    },
+    visibility: {
+      "1h": "1h",
+      "8h": "8h",
+      "24h": "24h",
+      off: "Off",
+    } as Record<VisibilityPreset, string>,
+    onboarding: {
+      auth: {
+        eyebrow: "Real-world networking",
+        title: "Keep the right people within reach after the room is gone.",
+        body:
+          "Mock sign in with Apple or Google to enter the prototype. Yuno remembers who was physically nearby, which event you shared, and what is worth following up on.",
+        appleLabel: "Continue with Apple",
+        googleLabel: "Continue with Google",
+        hint: "Mock authentication for this prototype.",
+      },
+      steps: [
+        {
+          eyebrow: "Nearby memory",
+          title: "Meet first. Reconnect later without QR detours.",
+          body:
+            "When two people with the app spend time nearby, the profile is remembered automatically so nobody needs to interrupt the conversation asking for links.",
+          points: [
+            "Recent encounters",
+            "Direct profile links",
+            "No awkward second ask",
+          ],
+          icon: "people-outline" as const,
+        },
+        {
+          eyebrow: "Event context",
+          title: "See which connections are inside the same event.",
+          body:
+            "Open an event to spot joined connections, invited guests, and the exact room where the strongest follow-up might happen.",
+          points: [
+            "Joined events",
+            "Invited guests",
+            "Connections going",
+          ],
+          icon: "calendar-outline" as const,
+        },
+        {
+          eyebrow: "Notes that matter",
+          title: "Save the detail that makes the follow-up feel human.",
+          body:
+            "Add a quick note right after the conversation so days later you still remember the topic, timing, and why that person mattered.",
+          points: [
+            "Quick notes",
+            "Shared-event tags",
+            "Better follow-up",
+          ],
+          icon: "document-text-outline" as const,
+        },
+      ],
+      continueLabel: "Continue",
+      enterLabel: "Enter demo",
+    },
+    home: {
+      greeting: (name: string) => `Good evening, ${name}`,
+      title: "Recent Encounters",
+      visibleNow: "Visible now",
+      invisibleFor: (preset: string) => `Invisible for ${preset}`,
+      mockScanActive: "Mock scan active",
+      nearbyToday: (count: number) => `${count} nearby today`,
+      heroTitle: "Recover the people that mattered, even after the room is gone.",
+      heroBody:
+        "Every encounter in this demo is mocked, but the product feeling is real: meet someone in person, open the app later, and reconnect with context.",
+      visibleProfiles: "visible profiles",
+      privatePassBys: "private pass-bys",
+      warmFollowUps: "warm follow-ups",
+      hiddenProfilesTitle: (count: number) =>
+        `${count} hidden profiles passed nearby`,
+      hiddenProfilesBody:
+        "You know someone was there, but identity stays private until they choose to be seen.",
+      sectionTitle: "People to revisit",
+      sectionMeta: "Tap a row for the profile sheet",
+      listTitle: "People you can revisit",
+      listBody: "Only real nearby encounters stay here, with enough context to reconnect later.",
+      filters: {
+        all: "All",
+        people: "People",
+        passBys: "Pass-bys",
+      },
+      subtitle: "People you've met nearby in the last 7 days.",
+      radarLive: "Live radar",
+      presenceTitle: "Visible nearby",
+      presenceBody:
+        "Turn this off and your profile disappears completely from nearby discovery until you enable it again.",
+      visibleNearby: "Nearby sharing on",
+      invisibleNearby: "Nearby sharing off",
+      radarButton: "Radar",
+      radarTitle: "Live proximity radar",
+      radarDetected: (count: number) => `${count} people detected`,
+      radarDetectedCompact: (count: number) => `${count} nearby`,
+      privatePassBySummary: (count: number) => `${count} private pass-bys`,
+      privatePassByBody: "People nearby who chose to remain private.",
+      passBysEmptyTitle: "Private pass-bys stay anonymous",
+      passBysEmptyBody:
+        "This view only confirms they were nearby. Their profile stays hidden until they choose to appear.",
+    },
+    events: {
+      eyebrow: "Event memory",
+      title: "Where your best conversations happened",
+      description:
+        "Group encounters by event so every follow-up keeps its original context.",
+      radarTitle: "Event radar",
+      radarActive: (count: number) =>
+        count === 1 ? "1 event live in radar" : `${count} events live in radar`,
+      eventDetails: "Event details",
+      viewEvent: "View event",
+      joinEvent: "Join event",
+      leaveEvent: "Leave event",
+      joinedStatus: "Joined",
+      invitedGuests: (count: number) =>
+        count === 1 ? "1 guest" : `${count} guests`,
+      invitedGuestsTitle: "Invited guests",
+      privateGuest: "Private guest",
+      membersOnly: "Members only nearby",
+      participantsLabel: "participants",
+      connectionsGoing: "connections going",
+      yourConnections: "Your connections in this event",
+      mayRunInto: "People you may run into",
+      hostedBy: "Hosted by",
+      eventPrivacyTitle: "Protected visibility while inside the event",
+      eventPrivacyBody:
+        "When you join an event, only members of that event can discover you in that place and time window.",
+      eventPrivacyActive:
+        "You are protected from everyone outside this event while checked in.",
+      eventPrivacyInactive:
+        "Join the event to become visible only to members during the event window.",
+      status: {
+        live: "Live",
+        upcoming: "Upcoming",
+        recent: "Closed",
+      },
+      peopleSeen: "people seen",
+      warmLeads: "warm leads",
+      savedInFeed: "saved in feed",
+      attendees: "People from this event",
+      attendeeCount: (count: number) => `${count} people captured`,
+      signal:
+        "Best used when event organizers encourage attendees to keep the app open.",
+    },
+    notes: {
+      eyebrow: "Memory notes",
+      title: "Keep the conversation context while it is still fresh.",
+      description:
+        "Small notes make the later follow-up feel intentional instead of random.",
+      tipTitle: "This is the quiet retention mechanic.",
+      tipBody:
+        "Notes are what make the app still useful three weeks after the event.",
+      addNote: "Add note",
+      editNote: "Edit note",
+      deleteNote: "Delete note",
+      openProfile: "Open profile",
+    },
+    profile: {
+      title: "You",
+      description:
+        "Tune what people see when they rediscover you after the event.",
+      activityTitle: "Network activity",
+      activityBody:
+        "A yearly view of how often you found people worth remembering and how strongly those moments turned into real connections.",
+      activityLegendQuiet: "lighter",
+      activityLegendDense: "stronger",
+      peopleFound: "people found",
+      connectionsClosed: "connections kept",
+      joinedEvents: "joined events",
+      bestWeek: (value: number) => `Best week ${value}`,
+      dayConnections: (count: number) =>
+        count === 1 ? "1 connection that day" : `${count} connections that day`,
+      viewPeople: "View people",
+      connectedThatDay: "Connected that day",
+      noConnectionsThatDay: "No saved connections on this day",
+      memberPrivacyTitle: "Event-member visibility",
+      memberPrivacyBody:
+        "When you join an event, your presence there is only discoverable by other members of that same event.",
+      edit: "Edit",
+      done: "Done",
+      cancel: "Cancel",
+      addLink: "Add",
+      editLink: "Save link",
+      removeLink: "Delete link",
+      addInterest: "Add interest",
+      addInterestPlaceholder: "Type a tag you want to show",
+      socialLinkPlaceholder: "Paste your profile link, email, or number",
+      socialLinkHint:
+        "Yuno detects the network from the link and formats the tag automatically.",
+      changePhoto: "Change photo",
+      changePhotoHint: "Pick a profile image style for this mock profile.",
+      editProfileTitle: "Profile details",
+      editProfileBody:
+        "Keep this short and immediately useful after a real conversation.",
+      fullNameLabel: "Full name",
+      roleLabel: "Role",
+      subtitleLabel: "Subtitle",
+      companyLabel: "Company",
+      headlineLabel: "Headline",
+      publicLinksTitle: "Public links",
+      publicLinksBody:
+        "These are the contact paths people expect after a strong event conversation.",
+      linkedinLabel: "LinkedIn",
+      instagramLabel: "Instagram",
+      whatsappLabel: "WhatsApp",
+      xLabel: "X",
+      telegramLabel: "Telegram",
+      emailLabel: "Email",
+      interestsTitle: "Interests",
+      interestsBody: "These tags shape how you appear in nearby memory.",
+      languageTitle: "Language",
+      languageBody:
+        "Switch all product copy between English and Brazilian Portuguese.",
+      recentEncounters: "recent encounters",
+      connectionsSaved: "connections saved",
+      invisibleMode: "Invisible mode",
+      invisibleBody:
+        "Control when your profile disappears from nearby history.",
+      premiumTitle: "Premium privacy enabled",
+      premiumBody:
+        "This mock includes instant invisibility, event-member visibility, and extended history as the clearest premium hooks.",
+      connectionsTitle: "Your connections",
+      eventsTitle: "Your events",
+    },
+    encounterCard: {
+      connected: "Connected",
+      openProfile: "Open profile",
+      followUp: {
+        warm: "Warm",
+        starred: "Starred",
+        pending: "Pending",
+      },
+    },
+    detail: {
+      remember: "What you will remember",
+      actions: "Available profile actions",
+      notes: "Notes",
+      notePlaceholder: "Add a quick note for later...",
+      saveNote: "Save note",
+      more: "More",
+      block: "Block",
+      restrictedTitle: "Profile locked for now",
+      restrictedBody:
+        "This person is visible in the event, but links, notes, and connection actions stay locked until they are nearby or choose to share.",
+      totalConnections: (count: number) =>
+        count === 1 ? "1 connection" : `${count} connections`,
+      sharedEvents: (count: number) =>
+        count === 1 ? "1 shared event" : `${count} shared events`,
+      mutualConnectionsLabel: "Mutual connections",
+      mutualConnections: (count: number) =>
+        count === 1 ? "1 mutual connection" : `${count} mutual connections`,
+      saved: "Connection saved",
+      connect: "Connect and unlock",
+    },
+    common: {
+      at: "at",
+      keyboardDone: "Done",
+      search: "Search",
+      filters: "Filters",
+      clear: "Clear",
+      close: "Done",
+      saved: "Saved",
+      tags: "Tags",
+      periods: "Periods",
+      events: "Events",
+      status: "Status",
+      time: "Time",
+      guests: "Guests",
+      connections: "Connections",
+      today: "Today",
+      earlier: "Earlier",
+      morning: "Morning",
+      afternoon: "Afternoon",
+      evening: "Evening",
+      withGuests: "With guests",
+      withConnections: "With connections",
+    },
+  } as const;
